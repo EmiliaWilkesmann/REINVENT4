@@ -146,6 +146,8 @@ class Learning(ABC):
 
             results = self.score()
 
+            self._after_score(results, step)
+
             if self._state.diversity_filter:
                 df_mask = np.where(self.invalid_mask, True, False)
 
@@ -233,6 +235,11 @@ class Learning(ABC):
         )
 
         return results
+
+    def _after_score(self, results: ScoreResults, step: int):
+        """Hook for additional processing after scoring"""
+
+        pass
 
     @abstractmethod
     def update(self, score, orig_smilies):

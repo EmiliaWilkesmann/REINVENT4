@@ -15,9 +15,37 @@ if TYPE_CHECKING:
     from reinvent.scoring import ScoreResults
 
 
+from .scaffold_pruner import ScaffoldPruner
+from reinvent.chemistry.library_design import attachment_points
+
+
 class LibinventLearning(Learning):
     """LibInvent optimization"""
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._scaffold_pruner = ScaffoldPruner(
+            self.input_smilies,
+            #self._state.scaffold_list,
+            normalize=attachment_points.remove_attachment_point_numbers,
+            warmup=3,
+            margin=0.0,
+            alpha=0.5,
+            #alpha=self._state.pruning_alpha,
+            #warmup=self._state.pruning_warmup,
+            #margin=self._state.pruning_margin,
+        )
+
+    def _after_score(self, results: ScoreResults, step: int):
+        """Hook for additional processing after scoring"""
+        changed = self._scaffold_pruner.update(
+            self.sampled.items1, results.total_scores, self.invalid_mask, step
+        )
+        print("EMA", step, self._scaffold_pruner.ema) 
+        if changed:
+            self.input_smilies = self._scaffold_pruner.active
+            print("PRUNE", step, self._scaffold_pruner.active)
+    
     def update(self, results: ScoreResults, orig_smilies):
         return self._update_common(results, orig_smilies)
 
