@@ -1,0 +1,284 @@
+16:13:02 <INFO> Started REINVENT 4.8.24 (C) AstraZeneca 2017, 2023 on 2026-11-09
+16:13:02 <INFO> Command line: /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/.venv/bin/reinvent -l test.log /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/reinvent-pruning-runs/configs/test_staged.toml
+16:13:02 <INFO> Reading run configuration from /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/reinvent-pruning-runs/configs/test_staged.toml using format toml
+16:13:02 <INFO> User User on host MacBookAir.fritz.box
+16:13:02 <INFO> Python version 3.14.6
+16:13:02 <INFO> PyTorch version 2.12.0 git 7661cd9c6b841b62b7f411aa52ec51f05457263b
+16:13:02 <INFO> PyTorch compiled with MPS
+16:13:02 <INFO> RDKit version 2026.03.6
+16:13:03 <INFO> Platform macOS-27.0.1-arm64-arm-64bit-Mach-O
+16:13:03 <INFO> Using CPU Apple M1
+16:13:03 <INFO> Writing TensorBoard summary to /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/reinvent-pruning-runs/output/tb_logs
+16:13:03 <INFO> Writing JSON config file to /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/reinvent-pruning-runs/output/_staged_learning.json
+16:13:03 <INFO> Starting 1 stage of Reinforcement Learning
+16:13:03 <ERRO> /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/priors/libinvent.prior has invalid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': '99944413c8f0b152c2bca0dca31aa6d3',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': '558e4fbd038c4b0ba67b03a025e657c4',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 27',
+  'updates': []}
+16:13:03 <INFO> Number of network parameters: 23,686,692
+16:13:03 <INFO> Network architecture:
+Decorator(
+  (_encoder): Encoder(
+    (_embedding): Sequential(
+      (0): Embedding(38, 512)
+      (1): Dropout(p=0.2, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True, dropout=0.2, bidirectional=True)
+  )
+  (_decoder): Decoder(
+    (_embedding): Sequential(
+      (0): Embedding(36, 512)
+      (1): Dropout(p=0.2, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True, dropout=0.2)
+    (_attention): AttentionLayer(
+      (_attention_linear): Sequential(
+        (0): Linear(in_features=1024, out_features=512, bias=True)
+        (1): Tanh()
+      )
+    )
+    (_linear): Linear(in_features=512, out_features=36, bias=True)
+  )
+)
+16:13:03 <ERRO> /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/priors/libinvent.prior has invalid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': '99944413c8f0b152c2bca0dca31aa6d3',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': '558e4fbd038c4b0ba67b03a025e657c4',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 27',
+  'updates': []}
+16:13:03 <INFO> Number of network parameters: 23,686,692
+16:13:03 <INFO> Network architecture:
+Decorator(
+  (_encoder): Encoder(
+    (_embedding): Sequential(
+      (0): Embedding(38, 512)
+      (1): Dropout(p=0.2, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True, dropout=0.2, bidirectional=True)
+  )
+  (_decoder): Decoder(
+    (_embedding): Sequential(
+      (0): Embedding(36, 512)
+      (1): Dropout(p=0.2, inplace=False)
+    )
+    (_rnn): LSTM(512, 512, num_layers=3, batch_first=True, dropout=0.2)
+    (_attention): AttentionLayer(
+      (_attention_linear): Sequential(
+        (0): Linear(in_features=1024, out_features=512, bias=True)
+        (1): Tanh()
+      )
+    )
+    (_linear): Linear(in_features=512, out_features=36, bias=True)
+  )
+)
+16:13:03 <INFO> Using generator Libinvent
+16:13:03 <INFO> Prior read from /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/priors/libinvent.prior
+16:13:03 <INFO> Agent read from /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/priors/libinvent.prior
+16:13:03 <INFO> Input molecules/fragments read from file /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/configs/scaffolds.smi
+16:13:03 <INFO> Using reward strategy dap
+16:13:03 <INFO> Diversity filter memories are retained between stages
+16:13:04 <INFO> Registered scoring component ROCSSimilarity
+16:13:04 <INFO> Registered scoring component GroupCount
+16:13:04 <INFO> Registered scoring component FragmentQed
+16:13:04 <INFO> Registered scoring component FragmentSlogP
+16:13:04 <INFO> Registered scoring component FragmentMolecularWeight
+16:13:04 <INFO> Registered scoring component FragmentTPSA
+16:13:04 <INFO> Registered scoring component FragmentDistanceMatrix
+16:13:04 <INFO> Registered scoring component FragmentNumAtomStereoCenters
+16:13:04 <INFO> Registered scoring component FragmentHBondAcceptors
+16:13:04 <INFO> Registered scoring component FragmentHBondDonors
+16:13:04 <INFO> Registered scoring component FragmentNumRotBond
+16:13:04 <INFO> Registered scoring component FragmentCsp3
+16:13:04 <INFO> Registered scoring component Fragmentnumsp
+16:13:04 <INFO> Registered scoring component Fragmentnumsp2
+16:13:04 <INFO> Registered scoring component Fragmentnumsp3
+16:13:04 <INFO> Registered scoring component FragmentEffectiveLength
+16:13:04 <INFO> Registered scoring component FragmentGraphLength
+16:13:04 <INFO> Registered scoring component FragmentLengthRatio
+16:13:04 <INFO> Registered scoring component FragmentNumHeavyAtoms
+16:13:04 <INFO> Registered scoring component FragmentNumHeteroAtoms
+16:13:04 <INFO> Registered scoring component FragmentNumRings
+16:13:04 <INFO> Registered scoring component FragmentNumAromaticRings
+16:13:04 <INFO> Registered scoring component FragmentNumAliphaticRings
+16:13:04 <INFO> Registered scoring component FragmentSlogP
+16:13:04 <INFO> Registered scoring component MatchingSubstructure
+16:13:04 <INFO> Registered scoring component MolVolume
+16:13:04 <INFO> Registered scoring component Qed
+16:13:04 <INFO> Registered scoring component LargestRingSize
+16:13:04 <INFO> Registered scoring component MolecularWeight
+16:13:04 <INFO> Registered scoring component GraphLength
+16:13:04 <INFO> Registered scoring component NumAtomStereoCenters
+16:13:04 <INFO> Registered scoring component HBondAcceptors
+16:13:04 <INFO> Registered scoring component HBondDonors
+16:13:04 <INFO> Registered scoring component NumRotBond
+16:13:04 <INFO> Registered scoring component Csp3
+16:13:04 <INFO> Registered scoring component numsp
+16:13:04 <INFO> Registered scoring component numsp2
+16:13:04 <INFO> Registered scoring component numsp3
+16:13:04 <INFO> Registered scoring component NumHeavyAtoms
+16:13:04 <INFO> Registered scoring component NumHeteroAtoms
+16:13:04 <INFO> Registered scoring component NumRings
+16:13:04 <INFO> Registered scoring component NumAromaticRings
+16:13:04 <INFO> Registered scoring component NumAliphaticRings
+16:13:04 <INFO> Registered scoring component SlogP
+16:13:04 <INFO> Registered scoring component LargestRingSize
+16:13:04 <INFO> Registered scoring component PMI
+16:13:04 <INFO> Registered scoring component RDKitDescriptors
+16:13:04 <INFO> Registered scoring component TanimotoSimilarity
+16:13:04 <INFO> Registered scoring component TanimotoDistance
+16:13:04 <INFO> Registered scoring component TPSA
+16:13:04 <INFO> Registered scoring component SAScore
+16:13:06 <ERRO> Component reinvent_plugins.components.comp_chemprop could not be imported: only Chemprop v1 supported
+16:13:06 <INFO> Registered scoring component ChemProp2
+16:13:06 <INFO> Registered scoring component CustomAlerts
+16:13:06 <INFO> Registered scoring component DockStream
+16:13:06 <INFO> Registered scoring component ExternalProcess
+16:13:06 <INFO> Registered scoring component REST
+16:13:06 <INFO> Registered scoring component Icolos
+16:13:06 <INFO> Registered scoring component MMP
+16:13:06 <INFO> Registered scoring component Qptuna
+16:13:06 <INFO> Registered scoring component ReactionFilter
+16:13:06 <INFO> Registered scoring component RingPrecedence
+16:13:06 <INFO> Registered scoring component Maize
+16:13:06 <INFO> Registered scoring component SynthSense
+16:13:06 <INFO> Registered scoring component CAZP
+16:13:06 <INFO> Creating scoring component MolecularWeight
+16:13:06 <INFO> Writing tabular data for stage to /Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/reinvent-pruning-runs/output/staged_learning_1.csv
+16:13:06 <INFO> Starting stage 1 <<<
+16:13:07 <WARN> reinvent_plugins.normalizers.rdkit_smiles: c1(S(=O)(CCO*)=O)cc2c(nccc2-c2ccc(C(F)(F)F)cc2-c2ccc(F)cc2)c1F|C* could not be converted
+16:13:07 <WARN> reinvent_plugins.normalizers.rdkit_smiles: c1c2c(c(OC)cc1N(C)C)cc1cnc--1c(O*)ccc2|c1(*)ccccc1 could not be converted
+16:13:08 <INFO> Score: 0.70 Agent NLL: 21.14 Valid:  94% Step: 1
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 6.4316 6.2979 120.0875 0.9873862 CCc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 C*|c1cc(*)ccc1 0.9873862 247.3410
+ | 40.5349 39.0139 -39.0134 0.0000041 CCc1cncc2ncc(CNC(CO)c3ccc(-c4cccc(NC(=O)C(CN)C(=O)NCCNS(N)(=O)=O)c4)cc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(C(N*)CO)ccc1-c1cc(NC(C(C(NCCNS(N)(=O)=O)=O)CN)=O)ccc1|*C 0.0000041 634.7630
+ | 6.7105 6.1272 120.3971 0.9884707 NCc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 *N|c1c(*)cccc1 0.9884707 248.3290
+ | 14.4398 16.1654 109.5321 0.9820114 CCc1cncc2ncc(CNCCNC(=O)NCCc3ccc(S(N)(=O)=O)cc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 C(CNC(=O)NCCN*)c1ccc(S(=O)(=O)N)cc1|C* 0.9820114 456.5720
+ | 15.5924 15.6152 112.3841 0.9999945 NC(=O)c1ccc(Cc2ccc3cncc(Cc4ccccc4)c3c2)cc1O 1 [*]Cc2ccc1cncc(C[*])c1c2 Oc1cc(*)ccc1C(N)=O|c1ccc(*)cc1 0.9999945 368.4360
+ | 37.8694 36.1161 -36.1161 0.0000000 c1(S(=O)(CCO*)=O)cc2c(nccc2-c2ccc(C(F)(F)F)cc2-c2ccc(F)cc2)c1F|C* 0 [*]Cc2cnc1cncc(C[*])c1c2 c1(S(=O)(CCO*)=O)cc2c(nccc2-c2ccc(C(F)(F)F)cc2-c2ccc(F)cc2)c1F|C* 0.0000000 0.0000
+ | 15.2144 17.8731 110.1223 0.9999639 CCc1ccc2cncc(CCCNS(=O)(=O)c3ccc(Cl)cc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 *C|c1(S(=O)(=O)NCC*)ccc(Cl)cc1 0.9999639 388.9200
+ | 5.4839 7.6248 22.5843 0.2360089 CCc1cncc2ncc(CN)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 *N|C* 0.2360089 187.2460
+ | 18.1632 17.6540 110.3457 0.9999970 Fc1ccc(Cc2ccc3cncc(Cc4ccccc4)c3c2)c(Cl)c1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1c(F)ccc(*)c1Cl|c1cc(*)ccc1 0.9999970 361.8470
+ | 32.6505 31.4414 -31.2568 0.0014424 CCc1cncc2ncc(CNCC(=O)Nc3cc(Cl)ccc3-c3ccc(N=C(N)NCC(F)(F)F)nc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(NC(=O)CN*)c(-c2cnc(N=C(N)NCC(F)(F)F)cc2)ccc1Cl|*C 0.0014424 571.0070
+16:13:10 <INFO> Score: 0.95 Agent NLL: 17.72 Valid: 100% Step: 2
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 21.8363 20.7346 19.0569 0.3108711 COc1cccc(S(=O)(=O)Nc2cc(Cc3ccc4cncc(Cc5ccccc5)c4c3)ccc2C)c1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1c(*)cc(NS(c2cccc(OC)c2)(=O)=O)c(C)c1|c1c(*)cccc1 0.3108711 508.6430
+ | 28.0701 28.7872 97.6120 0.9874935 O=C(CSc1ncccn1)NCCOCc1cnc2cncc(Cc3cscn3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 C(NCCO*)(CSc1ncccn1)=O|c1nc(*)cs1 0.9874935 452.5650
+ | 13.3357 13.6482 114.3475 0.9999659 Brc1ccccc1Cc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1c(*)c(Br)ccc1|c1cc(*)ccc1 0.9999659 388.3080
+ | 19.9294 21.7932 106.2050 0.9999858 Fc1cccc(Cl)c1Cc1cnc2cncc(CNc3cccnc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(Cl)c(*)c(F)c1|c1(N*)cccnc1 0.9999858 378.8380
+ | 17.0802 21.3164 106.6715 0.9999057 Fc1cc(F)cc(Cc2cncc3ccc(Cc4cc(F)c(F)cc4F)cc23)c1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1(F)c(F)cc(*)c(F)c1|Fc1cc(*)cc(F)c1 0.9999057 399.3620
+ | 28.2363 26.3563 101.6431 0.9999954 CNCc1cncc2ncc(CCCNS(=O)(=O)CCCCO)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(NCC*)(=O)CCCCO|N(C)* 0.9999954 366.4870
+ | 13.2853 13.3900 111.5372 0.9759936 NCc1ccc2cncc(CC(F)(F)F)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 N*|C(*)(F)(F)F 0.9759936 240.2280
+ | 8.3660 7.6828 118.9685 0.9894629 NCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 N*|c1ccc(*)cc1 0.9894629 249.3170
+ | 11.5883 10.5293 117.4706 0.9999986 O=C(O)c1ccc(Cc2ccc3cncc(Cc4ccccc4)c3c2)cc1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1cc(*)ccc1C(=O)O|c1ccc(*)cc1 0.9999986 353.4210
+ | 20.1428 25.7414 102.2552 0.9999739 CCc1cncc2ncc(CCCCNC(=O)Oc3ccc(F)c(F)c3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 N(CCC*)C(=O)Oc1ccc(F)c(F)c1|C* 0.9999739 385.4140
+16:13:11 <INFO> Score: 0.92 Agent NLL: 16.64 Valid: 100% Step: 3
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 16.1310 16.2312 111.7686 0.9999986 c1ccc(Cc2cncc3ccc(Cc4cccc5c4OCO5)cc23)cc1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1c(*)c2c(cc1)OCO2|c1cccc(*)c1 0.9999986 353.4210
+ | 14.6731 16.2845 111.6978 0.9998619 CS(=O)(=O)Nc1ccc(Cc2cnc3cncc(Cc4ccccc4)c3c2)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(*)ccc(NS(C)(=O)=O)cc1|c1cccc(*)c1 0.9998619 403.5070
+ | 14.7271 11.7102 116.2786 0.9999120 N#CCCNCc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 C(C#N)CN*|c1ccccc1* 0.9999120 301.3930
+ | 10.6061 17.0819 110.9162 0.9999852 Clc1ccc(Cc2cncc3ncc(Cc4ccccc4)cc23)cc1Cl 1 [*]Cc2cnc1cncc(C[*])c1c2 c1ccc(*)cc1|c1c(*)cc(Cl)c(Cl)c1 0.9999852 379.2900
+ | 13.4536 13.6232 111.0555 0.9740521 CCc1cncc2ccc(CC3CCCC3)cc12 1 [*]Cc2ccc1cncc(C[*])c1c2 C1C(*)CCC1|*C 0.9740521 239.3620
+ | 12.3751 16.4358 111.5629 0.9999894 Cc1ccccc1Cc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(*)c(C)ccc1|c1(*)ccccc1 0.9999894 324.4270
+ | 29.6100 31.9527 85.7722 0.9197253 N#Cc1c(N(CCO)CCO)cc(Cc2ccc3cncc(Cc4ccccc4)c3c2)c(F)c1F 1 [*]Cc2ccc1cncc(C[*])c1c2 *c1c(F)c(F)c(C#N)c(N(CCO)CCO)c1|*c1ccccc1 0.9197253 473.5230
+ | 16.3417 18.4973 109.0994 0.9968488 COc1ccc(S(=O)(=O)NCc2cnc3cncc(Cc4ccc(F)cc4)c3c2)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 COc1ccc(S(=O)(=O)N*)cc1|c1(F)ccc(*)cc1 0.9968488 437.4960
+ | 19.0757 16.1546 111.8376 0.9999396 N=C(N)c1ccc(NCCCc2ccc3cncc(Cc4ccccc4)c3c2)cc1 1 [*]Cc2ccc1cncc(C[*])c1c2 N(CC*)c1ccc(C(=N)N)cc1|c1c(*)cccc1 0.9999396 394.5220
+ | 23.4840 20.7985 98.5074 0.9320778 CS(=O)(=O)Nc1cccc2ccc(S(=O)(=O)NCc3cnc4cncc(CN)c4c3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 *NS(=O)(=O)c1ccc2cccc(NS(C)(=O)=O)c2c1|*N 0.9320778 471.5640
+16:13:13 <INFO> Score: 0.78 Agent NLL: 16.84 Valid: 100% Step: 4
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 7.5646 10.6682 117.3303 0.9999884 Cc1ccccc1Cc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 c1ccc(*)c(C)c1|c1(*)ccccc1 0.9999884 323.4390
+ | 14.8800 18.2482 109.7510 0.9999940 NC(=O)c1cccc(OCc2cnc3cncc(Cc4ccccc4)c3c2)c1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(O*)cccc(C(=O)N)c1|*c1ccccc1 0.9999940 369.4240
+ | 9.2479 11.1882 116.6885 0.9990367 CC(C)Cc1ccc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 C(C)(*)C|c1c(*)cccc1 0.9990367 275.3950
+ | 31.4714 40.9036 -40.4149 0.0038179 O=S(=O)(C(F)F)n1cc(-c2cc(Cc3cnc4cncc(Cc5ccc(Cl)c(Cl)c5)c4c3)ccn2)cn1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(*)cc(-c2cnn(S(=O)(=O)C(F)F)c2)nc1|c1(*)cc(Cl)c(Cl)cc1 0.0038179 560.4130
+ | 40.7767 44.6656 -42.1870 0.0193637 Cc1c2ccc(Nc3cc(Cc4ccc5cncc(Cc6ccccc6)c5c4)c(F)c(F)c3C#N)cc2nc[n+]1C 1 [*]Cc2ccc1cncc(C[*])c1c2 c1(*)c(F)c(F)c(C#N)c(Nc2cc3c(cc2)c(C)[n+](C)cn3)c1|c1ccccc1* 0.0193637 542.6130
+ | 11.3303 12.7776 115.2131 0.9999269 c1ccc(Cc2cncc3ncc(CN4CCCC4)cc23)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 C1CN(*)CC1|c1ccccc1* 0.9999269 303.4090
+ | 41.5284 43.0422 -42.9980 0.0003449 NCCCc1ccc2cncc(Cc3ccc(C(O)(CCCNCCCF)c4ccc(Cl)cc4F)cc3Cl)c2c1 1 [*]Cc2ccc1cncc(C[*])c1c2 C(*)CN|C(CC(c1ccc(*)c(Cl)c1)(O)c1c(F)cc(Cl)cc1)CNCCCF 0.0003449 586.5540
+ | 15.5592 18.3076 109.6921 0.9999980 Cc1cccc(Cc2cncc3ncc(Cc4ccc(F)cc4)cc23)c1 1 [*]Cc2cnc1cncc(C[*])c1c2 *c1ccc(F)cc1|c1c(*)cccc1C 0.9999980 342.4170
+ | 8.8604 8.5634 117.8220 0.9873862 CCc1cncc2ccc(Cc3ccccc3)cc12 1 [*]Cc2ccc1cncc(C[*])c1c2 c1ccccc1*|C* 0.9873862 247.3410
+ | 14.5862 14.4157 113.5835 0.9999940 CCc1cncc2ncc(CCCNS(=O)(=O)c3ccc(C)cc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(NCC*)(=O)c1ccc(C)cc1|*C 0.9999940 369.4900
+16:13:14 <INFO> Score: 0.97 Agent NLL: 14.57 Valid: 100% Step: 5
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 36.1004 37.3782 33.7336 0.5555613 CCc1cncc2ncc(Cc3nc4c(S(=O)(=O)NC(CC)CO)ccc(OC)c4c(=O)[nH]3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(*)nc2c(c(OC)ccc2S(NC(CC)CO)(=O)=O)c(=O)[nH]1|*C 0.5555613 497.5770
+ | 20.7459 22.3083 105.6892 0.9999802 O=C1NS(=O)(=O)NCC1Cc1cncc2ncc(Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 *c1ccccc1|S1(=O)(=O)NC(=O)C(*)CN1 0.9999802 382.4450
+ | 17.3484 22.6614 105.3131 0.9998010 NS(=O)(=O)c1cccc(Cc2cncc3ncc(Cc4ccccc4F)cc23)c1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(*)c(F)cccc1|c1cc(*)cc(S(=O)(N)=O)c1 0.9998010 407.4700
+ | 11.3219 12.4708 115.2697 0.9979731 NCc1cnc2cncc(Cc3ccccc3F)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 N*|c1(*)c(F)cccc1 0.9979731 267.3070
+ | 15.5855 18.6487 109.3459 0.9999585 O=S(=O)(NCc1cnc2cncc(Cc3ccccc3)c2c1)c1ccccn1 1 [*]Cc2cnc1cncc(C[*])c1c2 N(S(c1ncccc1)(=O)=O)*|c1cc(*)ccc1 0.9999585 390.4680
+ | 18.0271 24.9155 103.0613 0.9998183 CCc1cncc2ncc(Cc3ccc(S(N)(=O)=O)cc3S(N)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(c1ccc(*)c(S(=O)(=O)N)c1)N|C* 0.9998183 406.4890
+ | 8.5379 10.6942 115.8300 0.9884707 CCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 *C|c1cccc(*)c1 0.9884707 248.3290
+ | 16.1813 16.5300 111.4682 0.9999861 CCCc1cncc2ncc(COc3ccc(C(N)=O)cc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(O*)ccc(C(N)=O)c1|CC* 0.9999861 321.3800
+ | 9.1313 12.7487 114.9672 0.9977804 CCc1cncc2ncc(Cc3ccccc3F)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(F)c(*)cc1|C* 0.9977804 266.3190
+ | 6.1438 8.1798 118.3444 0.9884707 CCc1cncc2ncc(Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(*)cccc1|*C 0.9884707 248.3290
+16:13:15 <INFO> Score: 0.95 Agent NLL: 15.68 Valid: 100% Step: 6
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 18.3185 19.1259 108.1638 0.9944509 CCc1cnc2cncc(Cc3csnn3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 C*|c1(*)csnn1 0.9944509 256.3340
+ | 11.5280 13.4674 114.2486 0.9977818 CCc1cncc2ncc(CNS(N)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(N*)(N)=O|C* 0.9977818 266.3260
+ | 13.8018 15.5968 112.4030 0.9999985 CCc1cncc2ncc(Cc3ccc(F)cc3S(N)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1c(F)ccc(*)c1S(=O)(N)=O|*C 0.9999985 345.3990
+ | 12.9644 17.1190 110.8756 0.9999585 NS(=O)(=O)c1ccc(Cc2cnc3cncc(Cc4ccncc4)c3c2)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 *c1ccc(S(=O)(N)=O)cc1|*c1ccncc1 0.9999585 390.4680
+ | 21.6944 25.5918 102.4048 0.9999737 Cc1cccc(Cc2cnc3cncc(COCCNS(C)(=O)=O)c3c2)c1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1ccc(*)cc1C|C(CO*)NS(=O)(C)=O 0.9999737 385.4890
+ | 18.5203 23.3151 104.6785 0.9999499 Cn1cccc1S(=O)(=O)NCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(N*)(=O)c1n(C)ccc1|*c1ccccc1 0.9999499 392.4840
+ | 16.6944 17.8090 110.1677 0.9998183 CS(=O)(=O)NCc1cnc2cncc(CNS(=O)(=O)c3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(N*)(C)=O|S(=O)(N*)(c1ccccc1)=O 0.9998183 406.4890
+ | 13.5486 16.9594 111.0403 0.9999980 CNS(=O)(=O)NCc1cncc2ncc(Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(*)ccc1|S(NC)(=O)(=O)N* 0.9999980 342.4240
+ | 21.8731 15.7649 112.2348 0.9999980 CCc1cncc2ncc(CCCC3SCC4NC(=O)NC43)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S1CC2NC(=O)NC2C1CC*|*C 0.9999980 342.4680
+ | 31.3815 30.4830 -11.0288 0.1519861 CS(=O)(=O)NCc1cncc2ncc(Cc3ccccc3S(=O)(=O)NCCN3CCNCC3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(c1c(*)cccc1)(=O)(NCCN1CCNCC1)=O|S(C)(N*)(=O)=O 0.1519861 518.6650
+16:13:16 <WARN> reinvent_plugins.normalizers.rdkit_smiles: c1(*)c(O*)ccc(C#N)c1|c1c(*)c(F)cc(S(=O)(N)=O)c1 could not be converted
+16:13:16 <INFO> Score: 0.91 Agent NLL: 14.53 Valid:  94% Step: 7
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 11.3724 14.1176 113.8815 0.9999927 NS(=O)(=O)NCc1cncc2ncc(Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(*)ccc1|S(=O)(N*)(=O)N 0.9999927 328.3970
+ | 13.0997 14.9679 113.0311 0.9999927 CCc1cncc2ncc(CNS(=O)(=O)c3cccnc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 n1cccc(S(=O)(=O)N*)c1|*C 0.9999927 328.3970
+ | 9.7388 14.7908 111.8605 0.9894629 CCc1cncc2ncc(Cc3ccccn3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 n1ccccc1*|*C 0.9894629 249.3170
+ | 20.9576 29.6406 95.5984 0.9784300 O=S(=O)(c1ccccc1Cc1cnc2cncc(Cc3ccccc3)c2c1)C1CCOCC1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(c1c(*)cccc1)(C1CCOCC1)=O|c1(*)ccccc1 0.9784300 458.5830
+ | 13.3166 21.2795 106.7203 0.9999987 N#CCS(=O)(=O)NCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 C(S(=O)(=O)N*)C#N|c1cc(*)ccc1 0.9999987 352.4190
+ | 8.4878 11.8841 116.1149 0.9999920 CS(=O)(=O)NCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(N*)(=O)(C)=O|c1cc(*)ccc1 0.9999920 327.4090
+ | 12.6619 17.0103 110.9487 0.9996799 NCC#CCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 *C#CCN|c1(*)ccccc1 0.9996799 287.3660
+ | 10.0598 17.9372 110.0587 0.9999681 CS(=O)(=O)Cc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(C)(=O)*|c1(*)ccccc1 0.9999681 312.3940
+ | 28.1539 34.5036 38.1523 0.5676242 CCc1cncc2ncc(CC3(NS(N)(=O)=O)c4ccccc4Sc4cc(Cl)ccc43)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(NC1(*)c2ccccc2Sc2c1ccc(Cl)c2)(=O)(=O)N|*C 0.5676242 497.0450
+ | 13.1449 16.2822 111.7130 0.9999620 NS(=O)(=O)c1ccc(Cc2cnc3cncc(Cc4ccccc4)c3c2)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(S(=O)(N)=O)ccc1*|c1cc(*)ccc1 0.9999620 389.4800
+16:13:17 <INFO> Score: 0.93 Agent NLL: 15.74 Valid: 100% Step: 8
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 20.8174 21.9267 105.9806 0.9992758 CS(=O)(=O)NCc1cnc2cncc(Cc3cncc(NS(C)(=O)=O)c3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(C)(N*)=O|c1c(NS(C)(=O)=O)cc(*)cn1 0.9992758 421.5040
+ | 15.2246 25.0652 102.9270 0.9999392 N#CSCCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(C*)C#N|c1cc(*)ccc1 0.9999392 305.4060
+ | 10.5243 14.2223 113.7768 0.9999927 CS(=O)(=O)NCc1cnc2cncc(Cc3ccncc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(C)(N*)=O|c1c(*)ccnc1 0.9999927 328.3970
+ | 28.1159 27.2097 100.7897 0.9999954 CCNCc1cncc2ncc(CNS(=O)(=O)CCC#N)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(N*)(CCC#N)(=O)=O|N(CC)* 0.9999954 333.4170
+ | 15.7285 23.3096 104.6899 0.9999958 CCc1cncc2ncc(Cc3cn(S(C)(=O)=O)c4ccccc34)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(*)cn(S(=O)(=O)C)c2ccccc12|*C 0.9999958 365.4580
+ | 22.0867 27.7061 100.2706 0.9998175 CCc1cncc2ncc(C[SH](=O)(NC)c3ccccc3S(N)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 N(S(=O)(c1ccccc1S(N)(=O)=O)*)C|*C 0.9998175 406.5330
+ | 12.9044 21.9478 106.0511 0.9999920 CNS(=O)(=O)Cc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(NC)*|c1(*)ccccc1 0.9999920 327.4090
+ | 26.0523 38.1672 86.5296 0.9741938 CC(CO)Cc1cncc2ncc(Cc3ccc(S(=O)(=O)S(=O)(=O)C4CC4)cc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(C1CC1)S(=O)(=O)c1ccc(*)cc1|*C(CO)C 0.9741938 460.5770
+ | 10.8614 16.3629 111.6369 0.9999983 CS(=O)(=O)NCc1cnc2cncc(CNS(C)(=O)=O)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(N*)(C)=O|S(=O)(C)(=O)N* 0.9999983 344.4180
+ | 13.5280 15.8337 112.1604 0.9999536 O=C(O)c1ccc(Cc2cnc3cncc(CCO)c3c2)cc1 1 [*]Cc2cnc1cncc(C[*])c1c2 OC(=O)c1ccc(*)cc1|OC* 0.9999536 308.3370
+16:13:18 <INFO> Score: 0.93 Agent NLL: 13.54 Valid: 100% Step: 9
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 22.3268 33.9534 92.4500 0.9875265 CC(C)(S(=O)(=O)O)S(=O)(=O)NCc1cnc2cncc(CNS(C)(=O)=O)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(N*)(C(C)(C)S(=O)(=O)O)=O|S(N*)(=O)(=O)C 0.9875265 452.5360
+ | 13.9103 21.6989 106.2779 0.9998183 CS(=O)(=O)NCc1cnc2cncc(Cc3ccccc3S(N)(=O)=O)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(N*)(=O)(=O)C|c1ccc(*)c(S(=O)(=O)N)c1 0.9998183 406.4890
+ | 13.4125 14.2460 113.7517 0.9999817 c1cc(Cc2cncc3ncc(CC4CCNCC4)cc23)ccn1 1 [*]Cc2cnc1cncc(C[*])c1c2 C1CNCCC1*|c1cc(*)ccn1 0.9999817 318.4240
+ | 9.5344 15.0113 112.9031 0.9993315 CCCc1cncc2ncc(CNS(C)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(N*)(=O)(C)=O|*CC 0.9993315 279.3650
+ | 9.2597 9.3806 117.3869 0.9903706 NCc1cnc2cncc(Cc3ccncc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 N*|c1(*)ccncc1 0.9903706 250.3050
+ | 17.9227 28.4040 99.5910 0.9999617 CCc1cncc2ncc(CS(=O)(=O)N=C(N)S)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 SC(N)=NS(=O)(=O)*|*C 0.9999617 310.4040
+ | 14.9455 20.5945 107.4001 0.9999585 O=S(=O)(NCc1cnc2cncc(Cc3cccnc3)c2c1)c1ccccc1 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(N*)(=O)c1ccccc1|c1ncccc1* 0.9999585 390.4680
+ | 16.7607 35.1778 87.2055 0.9561194 O=S1(=O)NC(Cc2cnc3cncc(Cc4ccncc4)c3c2)S(=O)(=O)c2ccccc21 1 [*]Cc2cnc1cncc(C[*])c1c2 S1(=O)(=O)c2ccccc2S(=O)(=O)NC1*|c1c(*)ccnc1 0.9561194 466.5440
+ | 13.2174 14.5697 113.4301 0.9999978 CCc1cncc2ncc(CNS(=O)(=O)Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1(CS(=O)(=O)N*)ccccc1|C* 0.9999978 341.4360
+ | 14.7844 22.8870 105.1109 0.9999833 NS(=O)(=O)Cc1cnc2cncc(Cc3cccs3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(*)(=O)(=O)N|c1c(*)scc1 0.9999833 319.4110
+16:13:18 <WARN> reinvent_plugins.normalizers.rdkit_smiles: SC1CC(=O)Nc2c1SSC(SCC*)CSS|c1nc(*)ncc1 could not be converted
+16:13:19 <INFO> Score: 0.94 Agent NLL: 14.15 Valid:  94% Step: 10
+ | Agent Prior Target Score SMILES SMILES_state Input_Scaffold R-groups Molecular weight Molecular weight (raw)
+ | 9.7312 15.7839 112.2151 0.9999927 CS(=O)(=O)NCc1cnc2cncc(Cc3cccnc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(C)N*|c1(*)cccnc1 0.9999927 328.3970
+ | 14.1372 18.9999 108.9991 0.9999921 O=S(=O)(NCc1cnc2cncc(CNCCO)c2c1)c1ccccc1 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cccc(S(=O)(=O)N*)c1|C(CN*)O 0.9999921 372.4500
+ | 8.9755 16.6049 111.3949 0.9999983 CS(=O)(=O)NCc1cnc2cncc(CNS(C)(=O)=O)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(C)(=O)(=O)N*|S(=O)(=O)(C)N* 0.9999983 344.4180
+ | 42.8430 63.7249 -63.7249 0.0000000 SC1CC(=O)Nc2c1SSC(SCC*)CSS|c1nc(*)ncc1 0 [*]Cc2cnc1cncc(C[*])c1c2 SC1CC(=O)Nc2c1SSC(SCC*)CSS|c1nc(*)ncc1 0.0000000 0.0000
+ | 10.3682 12.3123 115.6866 0.9999920 CS(=O)(=O)NCc1cncc2ncc(Cc3ccccc3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 c1cc(*)ccc1|S(N*)(=O)(C)=O 0.9999920 327.4090
+ | 13.0382 19.5868 108.4122 0.9999921 CS(=O)(=O)NCCCc1cncc2ncc(CNS(C)(=O)=O)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(N*)C|C(CNS(=O)(=O)C)* 0.9999921 372.4720
+ | 16.8453 21.0555 106.8912 0.9995834 CS(=O)(=O)NCc1cncc2ncc(CNS(=O)(=O)N3CCOCC3)cc12 1 [*]Cc2cnc1cncc(C[*])c1c2 S(N*)(=O)(N1CCOCC1)=O|*NS(=O)(C)=O 0.9995834 415.4970
+ | 11.7969 16.5545 111.4453 0.9999985 CS(=O)(=O)NCc1cnc2cncc(CNS(N)(=O)=O)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(C)(N*)=O|S(=O)(N*)(=O)N 0.9999985 345.4060
+ | 10.0620 13.7484 114.2506 0.9999927 NS(=O)(=O)NCc1cnc2cncc(Cc3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 O=S(=O)(N*)N|c1cccc(*)c1 0.9999927 328.3970
+ | 12.6331 22.2034 105.7734 0.9998183 CS(=O)(=O)NCc1cnc2cncc(CNS(=O)(=O)c3ccccc3)c2c1 1 [*]Cc2cnc1cncc(C[*])c1c2 S(=O)(=O)(C)N*|S(c1ccccc1)(=O)(N*)=O 0.9998183 406.4890
+16:13:19 <WARN> Maximum number of steps of 10 reached in stage 1. Terminating all stages.
+16:13:19 <INFO> Peak main memory usage: 1714.391 MiB
+16:13:19 <INFO> Finished REINVENT on 2026-11-09

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/bin/reinvent", line 6, in <module>
+    sys.exit(main_script())
+             ^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/reinvent/Reinvent.py", line 170, in main_script
+    main(args)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/reinvent/Reinvent.py", line 71, in main
+    input_config = config_parse.read_config(args.config_filename, fmt)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/reinvent/utils/config_parse.py", line 250, in read_config
+    with open(filename, "rb") as tf:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/User/Desktop/Masterarbeit/Libinvent-Pruning-Project/REINVENT4/configs/test_staged.toml'
