@@ -24,13 +24,20 @@ class LibinventLearning(Learning):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self._apply_pruning = True  # False = Trockenlauf: nur protokollieren
         self._scaffold_pruner = ScaffoldPruner(
             self.input_smilies,
             #self._state.scaffold_list,
             normalize=attachment_points.remove_attachment_point_numbers,
             warmup=3,
+            cooldown=2,
             margin=0.0,
+            patience=2,
             alpha=0.5,
+            min_keep=1,
+            min_samples=3,
+            aggregate="mean",
+            samples_csv="scaffold_pruner_samples.csv",
             #alpha=self._state.pruning_alpha,
             #warmup=self._state.pruning_warmup,
             #margin=self._state.pruning_margin,
@@ -42,7 +49,7 @@ class LibinventLearning(Learning):
             self.sampled.items1, results.total_scores, self.invalid_mask, step
         )
         print("EMA", step, self._scaffold_pruner.ema) 
-        if changed:
+        if changed and self._apply_pruning:
             self.input_smilies = self._scaffold_pruner.active
             print("PRUNE", step, self._scaffold_pruner.active)
     
